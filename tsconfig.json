@@ -1,6 +1,6 @@
 {
-  "include": ["server/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts"],
+  "include": ["server/**/*", "shared/**/*"],
+  "exclude": ["node_modules", "dist", "client", "**/*.test.ts", "vite.config.ts"],
   "compilerOptions": {
     "outDir": "dist",
     "rootDir": "server",
@@ -8,6 +8,10 @@
     "module": "CommonJS",
     "strict": true,
     "esModuleInterop": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@shared/*": ["shared/*"]
+    }
   }
 }
