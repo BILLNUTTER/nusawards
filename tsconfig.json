@@ -1,9 +1,16 @@
 {
   "include": ["server/**/*", "shared/**/*"],
-  "exclude": ["node_modules", "dist", "client", "vite.config.ts", "**/*.test.ts"],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "client",
+    "vite.config.ts",
+    "server/vite.ts",
+    "**/*.test.ts"
+  ],
   "compilerOptions": {
     "outDir": "dist",
-    "rootDir": ".",            // include both server and shared
+    "rootDir": ".",
     "module": "CommonJS",
     "target": "ES2020",
     "strict": true,
